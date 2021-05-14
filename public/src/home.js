@@ -3,11 +3,13 @@ function findingAuthorsById(authors, id) {
 }
 
 function getTotalBooksCount(books) {
-return books.length
+  let bookCount=0;
+  for (book in books)bookCount++
+return bookCount;
 }
 
 function getTotalAccountsCount(accounts) {
-  return accounts.length
+  return accounts.map(account=>account.id).length
 }
 
 function getBooksBorrowedCount(books) {
